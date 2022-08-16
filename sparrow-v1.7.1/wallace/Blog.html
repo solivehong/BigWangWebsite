@@ -1,0 +1,53 @@
+{% extends "base_second.html" %}
+
+{% block extrahead %}
+<!--This two was missed in base-->
+{% endblock %}
+
+{% block content %}
+
+<!-- ============================================-->
+<!-- Preloader ==================================-->
+<div class="preloader" id="preloader">
+  <div class="loader">
+    <div class="line-scale-pulse-out-rapid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div><!-- ============================================-->
+<!-- End of Preloader ===========================-->
+
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section class="py-0" id="page-profile">
+  <!-- <div class="container-fluid"> -->
+  <!-- <div class="row"> -->
+  <!-- <div class="col-xl-5 px-0">
+        <div class="sticky-top overflow-hidden min-vh-100 min-vh-xl-100">
+          <div class="bg-holder" style="background-image:url(/wallace/images/wallace3_auto_x2.jpg);"
+            data-zanim-trigger="scroll" data-zanim-lg='{"animation":"zoom-out-slide-right","delay":0.4}'></div> -->
+  <!--/.bg-holder-->
+  <!-- </div>
+      </div> -->
+  <!-- <div class="col-xl-6 bg-white py-6"> -->
+  <div style="position: relative; width: 100%; 
+        padding-top: calc(100% * 1080 / 1280); 
+        border: 2px black solid;">
+    <iframe src="https://zhaohongqiangsoliva.github.io/public" title="Blog"
+      style="position: absolute; width: 100%; height: 100%; top: 0;">
+    </iframe>
+  </div>
+  <!-- <iframe src="https://zhaohongqiangsoliva.github.io" width="100%" height="1000px" frameborder="0">
+    您的浏览器不支持iframe，请升级
+  </iframe> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div>end of .container -->
+</section><!-- <section> close ============================-->
+<!-- ============================================-->
+
+{% endblock %}
