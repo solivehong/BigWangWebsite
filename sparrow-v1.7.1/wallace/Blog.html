@@ -24,19 +24,20 @@
 <!-- <section> begin ============================-->
 <section class="py-9 py-lg-10" id="page-blog" data-zanim-xs='{"delay":0.4,"animation":"zoom-out"}'
           data-zanim-trigger="scroll">
-          <div class="bg-holder" style="background-image:url(assets/img/blog-header.jpg);"></div>
+          <div class="bg-holder" style="background-image:url(/wallace/assets/img/blog-header.jpg);"></div>
           <!--/.bg-holder-->
           <div class="container">
                     <div class="row align-items-center">
                               <div class="col">
                                         <div class="overflow-hidden">
                                                   <h1 class="text-white text-underline" data-zanim-xs='{"delay":0.6}'
-                                                            data-zanim-trigger="scroll">sparrow blog</h1>
+                                                            data-zanim-trigger="scroll">Minxianlab blog</h1>
                                         </div>
                                         <div class="overflow-hidden">
                                                   <h6 class="mb-0 text-white ls-2 text-uppercase"
                                                             data-zanim-xs='{"delay":0.8}' data-zanim-trigger="scroll">
-                                                            Stories to write home about</h6>
+                                                            The man who has made up his mind to win will never say
+                                                            "impossible ".</h6>
                                         </div>
                               </div>
                     </div>
@@ -52,27 +53,25 @@
           <div class="container">
                     <div class="row">
                               <div class="col-lg-8">
+
                                         {% for i in pages %}
 
-                                        {% if "blog" not in i.dest_path and "Blog" in i.dest_path %}
-                                        </br>{{i.src_path.split("\")}}
+                                        {% if "blogs" in i.dest_path %}
 
 
-                                        <div class="mb-6 mb-xl-8"><a class="text-sans-serif text-500" href="#">May 15,
-                                                            2018</a><a class="text-black" href="page-blog-single.html">
-                                                            <h3>What selfies mean for avatars in VR and the way we
-                                                                      perceive ourselves</h3>
-                                                  </a><a class="btn btn-link pl-0" href="page-blog-single.html">read
-                                                            more<span
-                                                                      class="d-inline-block ml-1">&xrarr;</span></a><br><a
-                                                            href="#"><span
-                                                                      class="far fa-heart text-300 mt-3"></span><span
-                                                                      class="text-400 text-sans-serif pl-1">15</span></a><a
-                                                            href="#"><span
-                                                                      class="far fa-comment text-300 mt-3 ml-4"></span><span
-                                                                      class="text-400 text-sans-serif pl-1">23</span></a>
+                                        {% set time = i.url.split('blogs/') %}
+                                        {% set Str_Split_time = time[1].split("-") %}
+
+                                        <div class="mb-6 mb-xl-8"><a class="text-sans-serif text-500"
+                                                            href="#">{{Str_Split_time[0]}}-{{Str_Split_time[1]}}-{{Str_Split_time[2]}}
+                                                  </a><a class="text-black" href="../{{i.page.url}}">
+                                                            <h3>{{i.page.title}}</h3>
+                                                  </a><a class="btn btn-link pl-0" href="./{{i.page.url}}">read
+                                                            more<span class="d-inline-block ml-1">&xrarr;</span></a><br>
+
                                         </div>
                                         {% endif %}
+
 
                                         {% endfor %}
                                         <!-- <div class="mb-6 mb-xl-8"><a class="text-sans-serif text-500" href="#">April 17,
@@ -97,9 +96,9 @@
                                                             href="#"><span
                                                                       class="far fa-comment text-300 mt-3 ml-4"></span><span
                                                                       class="text-400 text-sans-serif pl-1">36</span></a>
-                                        </div>
-                                        <div class="mb-6 mb-xl-8"><img class="d-block w-100 mb-4 rounded"
-                                                            src="assets/img/blog-single-01.jpg" alt=""><a
+                                        </div> -->
+                                        <!-- <div class="mb-6 mb-xl-8"><img class="d-block w-100 mb-4 rounded"
+                                                            src="/wallace/assets/img/blog-single-01.jpg" alt=""><a
                                                             class="text-sans-serif text-500" href="#">March 13,
                                                             2018</a><a class="text-black" href="page-blog-single.html">
                                                             <h3>Identity Transfer And The Rise Of Virtual Surrealism
@@ -122,16 +121,16 @@
                                                             href="#"><span
                                                                       class="far fa-comment text-300 mt-3 ml-4"></span><span
                                                                       class="text-400 text-sans-serif pl-1">33</span></a>
-                                        </div>
-                                        <div class="mb-6 mb-xl-8">
+                                        </div> -->
+                                        <!-- <div class="mb-6 mb-xl-8">
                                                   <div class="owl-carousel owl-theme owl-theme-vertical owl-dots-inner owl-theme-white mb-4"
                                                             data-options='{"items":1,"autoplay":true,"loop":true,"autoplayHoverPause":true,"animateOut":"fadeOut"}'>
                                                             <img class="fit-cover rounded"
-                                                                      src="assets/img/bicycle-03.jpg" alt=""><img
+                                                                      src="/wallace/assets/img/bicycle-03.jpg" alt=""><img
                                                                       class="fit-cover rounded"
-                                                                      src="assets/img/bicycle-04.jpg" alt=""><img
+                                                                      src="/wallace/assets/img/bicycle-04.jpg" alt=""><img
                                                                       class="fit-cover rounded"
-                                                                      src="assets/img/bicycle-09.jpg" alt="">
+                                                                      src="/wallace/assets/img/bicycle-09.jpg" alt="">
                                                   </div><a class="text-sans-serif text-500" href="#">February 05,
                                                             2018</a><a class="text-black" href="page-blog-single.html">
                                                             <h3>XC, DH, trail—our mountain bikes cover every facet of
@@ -148,175 +147,219 @@
                                                             href="#"><span
                                                                       class="far fa-comment text-300 mt-3 ml-4"></span><span
                                                                       class="text-400 text-sans-serif pl-1">45</span></a>
-                                        </div>
-                                        <div class="mb-6 mb-lg-8"> -->
+                                        </div> -->
+                                        <div class="mb-6 mb-lg-8">
 
-                                        <!-- ============================================-->
-                                        <!-- <section> begin ============================-->
-                                        <section class="text-right py-0 mb-4">
-                                                  <div class="container">
-                                                            <div class="row align-items-end justify-content-center">
-                                                                      <div class="col-12 px-0">
-                                                                                <div
-                                                                                          class="position-relative min-vh-50 h-100">
-                                                                                          <div class="bg-holder rounded"
-                                                                                                    style="background-image:url(assets/img/workout-5.jpg);">
+                                                  <!-- ============================================-->
+                                                  <!-- <section> begin ============================-->
+                                                  <section class="text-right py-0 mb-4">
+                                                            <div class="container">
+                                                                      <div
+                                                                                class="row align-items-end justify-content-center">
+                                                                                <div class="col-12 px-0">
+                                                                                          <div
+                                                                                                    class="position-relative min-vh-50 h-100">
+                                                                                                    <!-- <div class="bg-holder rounded"
+                                                                                                              style="background-image:url(/wallace/assets/img/workout-5.jpg);">
+                                                                                                    </div> -->
+                                                                                                    <!--/.bg-holder-->
+                                                                                                    <!-- <a class="position-absolute b-0 r-0 mb-3 mr-4"
+                                                                                                              href="https://www.youtube.com/watch?v=rxGuNJ-nEYg"
+                                                                                                              data-fancybox
+                                                                                                              data-options='{"start":6,"end":168}'><svg
+                                                                                                                        width="60"
+                                                                                                                        height="60"
+                                                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                                                        viewbox="0 0 274.19 274.19"
+                                                                                                                        data-zanim-svg='{"duration":2,"ease":"CubicBezier","trigger":"scroll"}'>
+                                                                                                                        <defs>
+                                                                                                                                  <style>
+                                                                                                                                            .play-path {
+                                                                                                                                                      fill: none;
+                                                                                                                                                      stroke: #ffffff;
+                                                                                                                                                      stroke-linecap: round;
+                                                                                                                                                      stroke-linejoin: round;
+                                                                                                                                                      stroke-width: 12px;
+                                                                                                                                            }
+                                                                                                                                  </style>
+                                                                                                                        </defs>
+                                                                                                                        <g>
+                                                                                                                                  <path class="play-path"
+                                                                                                                                            d="M208.31,29.4A129.12,129.12,0,1,1,137.1,8m-1.48,170.53L199.94,137,104.07,79.46v113">
+                                                                                                                                  </path>
+                                                                                                                        </g>
+                                                                                                              </svg></a> -->
                                                                                           </div>
-                                                                                          <!--/.bg-holder-->
-                                                                                          <a class="position-absolute b-0 r-0 mb-3 mr-4"
-                                                                                                    href="https://www.youtube.com/watch?v=rxGuNJ-nEYg"
-                                                                                                    data-fancybox
-                                                                                                    data-options='{"start":6,"end":168}'><svg
-                                                                                                              width="60"
-                                                                                                              height="60"
-                                                                                                              xmlns="http://www.w3.org/2000/svg"
-                                                                                                              viewbox="0 0 274.19 274.19"
-                                                                                                              data-zanim-svg='{"duration":2,"ease":"CubicBezier","trigger":"scroll"}'>
-                                                                                                              <defs>
-                                                                                                                        <style>
-                                                                                                                                  .play-path {
-                                                                                                                                            fill: none;
-                                                                                                                                            stroke: #ffffff;
-                                                                                                                                            stroke-linecap: round;
-                                                                                                                                            stroke-linejoin: round;
-                                                                                                                                            stroke-width: 12px;
-                                                                                                                                  }
-                                                                                                                        </style>
-                                                                                                              </defs>
-                                                                                                              <g>
-                                                                                                                        <path class="play-path"
-                                                                                                                                  d="M208.31,29.4A129.12,129.12,0,1,1,137.1,8m-1.48,170.53L199.94,137,104.07,79.46v113">
-                                                                                                                        </path>
-                                                                                                              </g>
-                                                                                                    </svg></a>
                                                                                 </div>
                                                                       </div>
-                                                            </div>
-                                                  </div><!-- end of .container-->
-                                        </section><!-- <section> close ============================-->
-                                        <!-- ============================================-->
+                                                            </div><!-- end of .container-->
+                                                  </section><!-- <section> close ============================-->
+                                                  <!-- ============================================-->
 
-                                        <a class="text-sans-serif text-500" href="#">January 07, 2018</a><a
-                                                  class="text-black" href="page-blog-single.html">
-                                                  <h3>Make the most of your sport with sparrow</h3>
-                                        </a>
-                                        <h4 class="font-weight-normal text-700 mt-3">connect with thousands of
-                                                  more active people in sparrow community, share your
-                                                  progress, stay motivated, get inspired.</h4><a
-                                                  class="btn btn-link pl-0" href="page-blog-single.html">read
-                                                  more<span class="d-inline-block ml-1">&xrarr;</span></a><br><a
-                                                  href="#"><span class="far fa-heart text-300 mt-3"></span><span
-                                                            class="text-400 text-sans-serif pl-1">48</span></a><a
-                                                  href="#"><span class="far fa-comment text-300 mt-3 ml-4"></span><span
-                                                            class="text-400 text-sans-serif pl-1">21</span></a>
-                              </div>
-                              <nav aria-label="Blog Pagination">
-                                        <ul class="pagination justify-content-center">
-                                                  <li class="page-item d-none d-lg-block"><a class="page-link"
-                                                                      href="#">First</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#"
-                                                                      aria-label="Previous"><span
-                                                                                class="fa fa-caret-left"
-                                                                                aria-hidden="true"></span><span
-                                                                                class="sr-only">Previous</span></a>
-                                                  </li>
-                                                  <li class="page-item"><a class="page-link" href="#">10</a>
-                                                  </li>
-                                                  <li class="page-item active"><a class="page-link" href="#">11</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">...</a>
-                                                  </li>
-                                                  <li class="page-item"><a class="page-link" href="#">25</a>
-                                                  </li>
-                                                  <li class="page-item"><a class="page-link" href="#">26</a>
-                                                  </li>
-                                                  <li class="page-item"><a class="page-link" href="#"
-                                                                      aria-label="Next"><span class="fa fa-caret-right"
-                                                                                aria-hidden="true"></span><span
-                                                                                class="sr-only">Next</span></a>
-                                                  </li>
-                                                  <li class="page-item d-none d-lg-block"><a class="page-link"
-                                                                      href="#">Last</a></li>
-                                        </ul>
-                              </nav>
-                    </div>
-                    <div class="col-lg-4 mt-6 mt-lg-0 pl-xl-7">
-                              <div class="row px-2">
-                                        <div class="col">
-                                                  <form class="input-iconic">
-                                                            <div class="input-icon"><button type="submit"><span
-                                                                                          class="fas fa-search text-300"></span></button>
-                                                            </div><input class="form-control" type="search"
-                                                                      placeholder="Search..." />
-                                                  </form>
-                                                  <h4 class="mt-5">Popular</h4><a class="mt-3 d-inline-block"
-                                                            href="page-blog-single.html"><img
-                                                                      class="rounded w-100 fit-cover"
-                                                                      src="assets/img/blog-1.jpg" alt="" />
-                                                            <h5 class="mt-3">How to take the shame out of
-                                                                      self-promotion</h5>
-                                                  </a><a class="mt-4 d-inline-block" href="page-blog-single.html"><img
-                                                                      class="rounded w-100 fit-cover"
-                                                                      src="assets/img/blog-3.jpg" alt="" />
-                                                            <h5 class="mt-3">Magic. My Macbook has been
-                                                                      stolen.</h5>
+                                                  <!-- <a class="text-sans-serif text-500" href="#">January 07, 2018</a><a
+                                                            class="text-black" href="page-blog-single.html">
+                                                            <h3>Make the most of your sport with sparrow</h3>
                                                   </a>
-                                                  <div class="mt-6">
-                                                            <h4>Tags</h4>
-                                                            <ul class="nav mt-3">
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Creativity</a>
-                                                                      </li>
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Ideas</a>
-                                                                      </li>
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Travel</a>
-                                                                      </li>
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Art</a>
-                                                                      </li>
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Psychology</a>
-                                                                      </li>
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Life</a>
-                                                                      </li>
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Music</a>
-                                                                      </li>
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Books</a>
-                                                                      </li>
-                                                                      <li><a class="btn btn-xs btn-outline-secondary m-1"
-                                                                                          href="#">Movie</a>
-                                                                      </li>
-                                                            </ul>
-                                                  </div>
-                                                  <div class="mt-6">
-                                                            <h4>Categories</h4>
-                                                            <ul class="bullet-inside pl-0 text-sans-serif">
-                                                                      <li><a class="text-600" href="#">Design</a>
-                                                                      </li>
-                                                                      <li><a class="text-600" href="#">Programming</a>
-                                                                      </li>
-                                                                      <li><a class="text-600" href="#">Writing</a>
-                                                                      </li>
-                                                                      <li><a class="text-600" href="#">Games</a>
-                                                                      </li>
-                                                                      <li><a class="text-600" href="#">Typography</a>
-                                                                      </li>
-                                                                      <li><a class="text-600" href="#">Cricket</a>
-                                                                      </li>
-                                                                      <li><a class="text-600" href="#">Soccer</a>
-                                                                      </li>
-                                                                      <li><a class="text-600" href="#">Photography</a>
-                                                                      </li>
-                                                            </ul>
+                                                  <h4 class="font-weight-normal text-700 mt-3">connect with thousands of
+                                                            more active people in sparrow community, share your
+                                                            progress, stay motivated, get inspired.</h4><a
+                                                            class="btn btn-link pl-0" href="page-blog-single.html">read
+                                                            more<span
+                                                                      class="d-inline-block ml-1">&xrarr;</span></a><br><a
+                                                            href="#"><span
+                                                                      class="far fa-heart text-300 mt-3"></span><span
+                                                                      class="text-400 text-sans-serif pl-1">48</span></a><a
+                                                            href="#"><span
+                                                                      class="far fa-comment text-300 mt-3 ml-4"></span><span
+                                                                      class="text-400 text-sans-serif pl-1">21</span></a> -->
+                                        </div>
+
+                                        <!-- 翻页控制 -->
+                                        <!-- <nav aria-label="Blog Pagination">
+                                                  <ul class="pagination justify-content-center">
+                                                            <li class="page-item d-none d-lg-block"><a class="page-link"
+                                                                                href="#">First</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#"
+                                                                                aria-label="Previous"><span
+                                                                                          class="fa fa-caret-left"
+                                                                                          aria-hidden="true"></span><span
+                                                                                          class="sr-only">Previous</span></a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">10</a>
+                                                            </li>
+                                                            <li class="page-item active"><a class="page-link"
+                                                                                href="#">11</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">...</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">25</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">26</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#"
+                                                                                aria-label="Next"><span
+                                                                                          class="fa fa-caret-right"
+                                                                                          aria-hidden="true"></span><span
+                                                                                          class="sr-only">Next</span></a>
+                                                            </li>
+                                                            <li class="page-item d-none d-lg-block"><a class="page-link"
+                                                                                href="#">Last</a></li>
+                                                  </ul>
+                                        </nav> -->
+
+                                        <!-- 翻页控制 -->
+                              </div>
+                              <div class="col-lg-4 mt-6 mt-lg-0 pl-xl-7">
+                                        <div class="row px-2">
+                                                  <div class="col">
+                                                            <h5><a href="/about/">ABOUT</a></h5>
+                                                            <div class="short-about">
+
+                                                                      <a href="/about">
+                                                                                <img class="rounded w-100 fit-cover"
+                                                                                          src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" />
+                                                                      </a>
+
+
+                                                                      <p>Goals determine what you going to be!</p>
+
+                                                                      <!-- SNS Link -->
+                                                                      <ul class="list-inline">
+
+                                                                                <!-- add jianshu add target = "_blank" to <a> by BY -->
+
+
+
+
+                                                                      </ul>
+
+                                                                      <a href=/contact />Contact</a>
+
+                                                            </div>
+                                                            <!-- <form class="input-iconic">
+                                                                      <div class="input-icon"><button
+                                                                                          type="submit"><span
+                                                                                                    class="fas fa-search text-300"></span></button>
+                                                                      </div><input class="form-control" type="search"
+                                                                                placeholder="Search..." />
+                                                            </form> -->
+                                                            <!-- <h4 class="mt-5">Popular</h4><a class="mt-3 d-inline-block"
+                                                                      href="page-blog-single.html"><img
+                                                                                class="rounded w-100 fit-cover"
+                                                                                src="/wallace/assets/img/blog-1.jpg" alt="" />
+                                                                      <h5 class="mt-3">How to take the shame out of
+                                                                                self-promotion</h5>
+                                                            </a><a class="mt-4 d-inline-block"
+                                                                      href="page-blog-single.html"><img
+                                                                                class="rounded w-100 fit-cover"
+                                                                                src="/wallace/assets/img/blog-3.jpg" alt="" />
+                                                                      <h5 class="mt-3">Magic. My Macbook has been
+                                                                                stolen.</h5>
+                                                            </a> -->
+                                                            <!-- <div class="mt-6">
+                                                                      <h4>Tags</h4>
+                                                                      <ul class="nav mt-3">
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Creativity</a>
+                                                                                </li>
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Ideas</a>
+                                                                                </li>
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Travel</a>
+                                                                                </li>
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Art</a>
+                                                                                </li>
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Psychology</a>
+                                                                                </li>
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Life</a>
+                                                                                </li>
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Music</a>
+                                                                                </li>
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Books</a>
+                                                                                </li>
+                                                                                <li><a class="btn btn-xs btn-outline-secondary m-1"
+                                                                                                    href="#">Movie</a>
+                                                                                </li>
+                                                                      </ul>
+                                                            </div> -->
+                                                            <!-- <div class="mt-6">
+                                                                      <h4>Categories</h4>
+                                                                      <ul class="bullet-inside pl-0 text-sans-serif">
+                                                                                <li><a class="text-600"
+                                                                                                    href="#">Design</a>
+                                                                                </li>
+                                                                                <li><a class="text-600"
+                                                                                                    href="#">Programming</a>
+                                                                                </li>
+                                                                                <li><a class="text-600"
+                                                                                                    href="#">Writing</a>
+                                                                                </li>
+                                                                                <li><a class="text-600"
+                                                                                                    href="#">Games</a>
+                                                                                </li>
+                                                                                <li><a class="text-600"
+                                                                                                    href="#">Typography</a>
+                                                                                </li>
+                                                                                <li><a class="text-600"
+                                                                                                    href="#">Cricket</a>
+                                                                                </li>
+                                                                                <li><a class="text-600"
+                                                                                                    href="#">Soccer</a>
+                                                                                </li>
+                                                                                <li><a class="text-600"
+                                                                                                    href="#">Photography</a>
+                                                                                </li>
+                                                                      </ul>
+                                                            </div> -->
                                                   </div>
                                         </div>
                               </div>
                     </div>
-          </div>
           </div><!-- end of .container-->
 </section>
 

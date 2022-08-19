@@ -1,21 +1,7 @@
 ---
-template: wallace/Blog.html
+template: wallace/blog.html
 title: Blog
 
 ---
 
-
-
-
-
-
-
-# this is a test  really
-
-
-
-
-
-
-
-asdanjkdnajndkankjdn
+# this is test
