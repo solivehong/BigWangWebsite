@@ -1,5 +1,5 @@
 ---
-template: wallace/blog.html
+template: wallace/Blog.html
 title: Blog
 
 ---
